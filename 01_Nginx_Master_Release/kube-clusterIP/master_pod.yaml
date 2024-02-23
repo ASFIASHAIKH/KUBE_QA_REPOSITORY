@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: master-nginx
+  labels:
+    app: master-nginx
+spec:
+  containers:
+  - name: master-nginx-container
+    image:  asfiyask/cloudethix_master_nginx_asfiya:v2
+    ports:
+    - containerPort: 80
