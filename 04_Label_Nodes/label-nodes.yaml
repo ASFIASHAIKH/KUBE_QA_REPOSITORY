@@ -1,0 +1,16 @@
+# Label pod worker-0
+apiVersion: v1
+kind: Node
+metadata:
+  name: worker-0
+  labels:
+    cloudethix-k8s-00: "true"
+
+---
+# Label pod worker-1
+apiVersion: v1
+kind: Node
+metadata:
+  name: worker-1
+  labels:
+    cloudethix-k8s-01: "true"
