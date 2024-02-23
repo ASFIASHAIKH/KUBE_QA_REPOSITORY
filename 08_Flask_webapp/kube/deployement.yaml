@@ -1,0 +1,22 @@
+# flask-webapp-deployment yaml file
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: flask-webapp-deployment
+  labels:
+    app: flask-webapp
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: flask-webapp
+  template:
+    metadata:
+      labels:
+        app: flask-webapp
+    spec:
+      containers:
+        - name:  flask-webapp-cont
+          image: asfiyask/flask_webapp_asfiya:version2
+          ports:
+            - containerPort: 8080
